@@ -1,0 +1,36 @@
+import json
+model_output = {
+    "systemName": "RECOMMENDATION SYSTEM",
+    "factoryRequirements": {
+        "requiredQuantity": "5 Tons / Month",
+        "requiredSpecifications": [
+            "high durability",
+            "high heat resistance"
+        ]
+    },
+    "recommendedMaterials": [
+        {
+            "alternative": 1,
+            "material": "Local Polymer A",
+            "matchScore": 100.0,
+            "availableQuantity": "6 Tons / Month",
+            "supplier": "Nile Industrial Materials",
+            "location": "Beni Suef"
+        },
+        {
+            "alternative": 2,
+            "material": "Local Polymer B",
+            "matchScore": 100.0,
+            "availableQuantity": "5 Tons / Month",
+            "supplier": "Delta Materials",
+            "location": "Cairo"
+        }
+    ],
+    "finalRecommendation": {
+        "material": "Local Polymer A",
+        "matchScore": 100.0,
+        "supplier": "Nile Industrial Materials",
+        "location": "Beni Suef"
+    }
+} 
+print(json.dumps(model_output, indent=4))
